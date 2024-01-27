@@ -1,7 +1,7 @@
 @Library('shared-utils') _
 
 index(
-    scmUrl: 'https://github.com/Sushant-Gandalwar/Jenkins-Docker-Kubernetes-Project3',
+    scmUrl: 'https://github.com/Sushant-Gandalwar/dockerfile-demo',
     appName: 'react-app-demo',
     dockerDirectory: '/var/lib/jenkins/workspace/dem ',
     dockerImage: 'gcr.io/jenkins-407204/demo',
