@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: myapp
+ name: demo1
  labels:
-  app: myapp
+  app: demo1
 spec:
  replicas: 1
  selector:
   matchLabels:
-   app: myapp
+   app: demo1
  template:
   metadata: 
    labels:
-    app: myapp
+    app: demo1
   spec:
    containers:
-   - name: myapp
+   - name: demo1
      image: gcr.io/jenkins-407204/demo:tagversion
      ports:
      - containerPort: 8080
@@ -25,11 +25,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp
+  name: demo1
 spec:
   type: LoadBalancer
   selector:
-    app: myapp
+    app: demo1
   ports:
     - protocol: TCP
       port: 80
